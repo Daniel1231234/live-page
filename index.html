@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>blog in</title>
+    <script src="https://kit.fontawesome.com/8f8c38fd6d.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="main-screen" onclick="toggleMenu()"></div>
+    <header class="main-header">
+        <div class="main-layout flex space-between align-center">
+            <div class="main-logo">Blogin<span>.</span></div>
+            <ul class="nav-bar flex clean-list">
+                <li><a class="active" href="#">Journal</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#fb">Contact</a></li>
+            </ul>
+            <button onclick="toggleMenu(this)" class="menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <main class="main-content main-layout card-layout ">
+
+        <section class="card flex">
+            <img class='card-img' src="/images/001.png" alt="">
+            <div class="card-content">
+                <h2>DUIS AUTE IRURE DOLOR IN HENDERIT IN VOLUPTATE.</h2>
+
+                <p>
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur...</p>
+
+                <button onclick="openModal()" class="btn-round btn-arrow">Continue reading</button>
+            </div>
+        </section>
+
+        <section class="card flex">
+            <img class="card-img" src="/images/002.png" alt="">
+            <div class="card-content">
+                <h2>DUIS AUTE IRURE DOLOR IN HENDERIT IN VOLUPTATE.</h2>
+
+                <p>
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur...</p>
+
+                <button onclick="openModal()" class="btn-round btn-arrow">Continue reading</button>
+            </div>
+        </section>
+
+        <section class="card flex">
+            <img class="card-img" src="/images/003.png" alt="">
+            <div class="card-content">
+                <h2>DUIS AUTE IRURE DOLOR IN HENDERIT IN VOLUPTATE.</h2>
+                <p>
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur...</p>
+
+                <button onclick="openModal()" class="btn-round btn-arrow">Continue reading</button>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal hidden">
+        <h1>modal</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem officiis provident dolores sint quo nisi
+            mollitia saepe consequuntur obcaecati dolore aspernatur, dolor, eaque veniam! Quas et beatae labore nisi
+            corporis.</p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <div class="flex space-between align-center paging flex">
+        <a href="#">← previous</a>
+        <a href="#">next →</a>
+    </div>
+
+    <footer class="footer flex footer-layout align-center  ">
+        <div class="main-logo">Blogin<span>.</span></div>
+        <p>© 2014 Blogin.com - All Rights Reserved - Find more free Templates at Pixelhint.com</p>
+        <div class="">
+            <div class="social-links flex">
+                <a id="fb" href="#" class="fa fa-facebook-f"></a>
+                <a id="twitter" href="#" class="fa fa-twitter"></a>
+                <a id="be" href="#" class="fa fa-behance"></a>
+                <a id="basketball" href="#" class="fa fa-basketball"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu(elBtn) {
+            document.body.classList.toggle('menu-open');
+            document.body.classList.contains('menu-open') ? elBtn.innerText = 'X' : elBtn.innerText = '☰';
+
+        }
+
+        const openModal = function () {
+            const modal = document.querySelector('.modal')
+            const overlay = document.querySelector('.overlay')
+            modal.classList.remove('hidden');
+            overlay.classList.remove('hidden');
+        };
+
+        const closeModal = function () {
+            const modal = document.querySelector('.modal')
+            const overlay = document.querySelector('.overlay')
+            modal.classList.add('hidden');
+            overlay.classList.add('hidden');
+        };
+    </script>
+</body>
+
+</html>
